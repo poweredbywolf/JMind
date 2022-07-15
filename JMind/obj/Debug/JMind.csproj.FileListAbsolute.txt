@@ -1,0 +1,16 @@
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/actool/_PartialAppManifest.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/actool/_ProcessedImageAssetsPath.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/coremlc/_PartialAppManifest.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/coremlc/_BundleResourceWithLogicalName.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/_ProcessedBundleResourcesPath.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/_ProcessedContentPath.items
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/JMind.csproj.AssemblyReference.cache
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/JMind.csproj.CoreCompileInputs.cache
+/Users/empirestrikesback/Projects/JMind/JMind/bin/Debug/JMind.exe
+/Users/empirestrikesback/Projects/JMind/JMind/bin/Debug/JMind.pdb
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/JMind.exe
+/Users/empirestrikesback/Projects/JMind/JMind/obj/Debug/JMind.pdb
