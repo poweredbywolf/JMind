@@ -21,6 +21,21 @@
 				<integer>13</integer>
 			</dict>
 		</array>
+		<key>QJD-ct-T5q</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>QJD-ct-T5q</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
 		<key>VFf-Nl-VhK</key>
 		<array>
 			<dict>
@@ -34,6 +49,21 @@
 				<string>IBIssueTypeClippedContent</string>
 				<key>type-value</key>
 				<integer>13</integer>
+			</dict>
+		</array>
+		<key>mDD-jF-IHf</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>mDD-jF-IHf</string>
+				</array>
+				<key>message</key>
+				<string>NSTextField's height does not match its intrinsic content size, use "Size to Fit Content" to correct</string>
+				<key>type</key>
+				<string>IBIssueTypeIntrinsicSizeMismatch</string>
+				<key>type-value</key>
+				<integer>22</integer>
 			</dict>
 		</array>
 	</dict>
