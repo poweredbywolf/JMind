@@ -6,6 +6,40 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>8620AB71-49B2-4A42-8BD4-D41A5D1F8602</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8620AB71-49B2-4A42-8BD4-D41A5D1F8602.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>JMind project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>JMind</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build JMind</string>
+			<key>timeStartedRecording</key>
+			<real>679766119.68484902</real>
+			<key>timeStoppedRecording</key>
+			<real>679766128.892506</real>
+			<key>title</key>
+			<string>Build JMind</string>
+			<key>uniqueIdentifier</key>
+			<string>8620AB71-49B2-4A42-8BD4-D41A5D1F8602</string>
+		</dict>
 		<key>BC95B66D-7445-4D66-B855-1D3EFD160908</key>
 		<dict>
 			<key>className</key>

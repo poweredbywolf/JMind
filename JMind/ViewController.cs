@@ -57,9 +57,9 @@ namespace JMind
 		// MARK: DECLARED PUBLIC LISTS
 
 		//List of correct positions and colours for each row
-		public List<int> PC;
+		public int[] PC = { 0, 0, 0, 0 };
 		//List of colours in each row
-		public List<int> ColOnly;
+		public int[] ColOnly = {0,0,0,0};
 
 		public NSColor[] ColorOptions =
 			{
@@ -72,13 +72,13 @@ namespace JMind
 			};
 
 
-	// Lists for various Rows to keep track of user guesses
-		public List<NSColor> Solution;
-		public List<NSColor> Row1;
-		public List<NSColor> Row2;
-		public List<NSColor> Row3;
+		// Lists for various Rows to keep track of user guesses
+		public NSColor[] Solution = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, }  ;
+		public NSColor[] Row1 = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, };
+		public NSColor[] Row2 = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, };
+		public NSColor[] Row3 = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, };
 
-//----------------------------------------------
+		//----------------------------------------------
 
 		// MARK: DECLARED FUNCTIONS
 
@@ -333,14 +333,19 @@ namespace JMind
 			int PositionsColours = 0;
 			int ColoursOnly = 0;
 			int ColurSubtract = 0;
-			List<NSColor> CurrentSolution = new List<NSColor>();
+			//List<NSColor> CurrentSolution = new List<NSColor>();
+			NSColor[] CurrentSolution = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, };
 
 			Console.WriteLine($"Checking Row {Counter}");
 
-			Solution[0] = A1.BezelColor;
-			Solution[1] = B1.BezelColor;
-			Solution[2] = C1.BezelColor;
-			Solution[3] = D1.BezelColor;
+            Solution[0] = ATop.BezelColor;
+            Solution[1] = BTop.BezelColor;
+            Solution[2] = CTop.BezelColor;
+            Solution[3] = DT.BezelColor;
+
+            Console.WriteLine(ATop.BezelColor);
+			//Solution[0] = NSColor.Red;
+			//Solution[1] = NSColor.Black;
 
 			switch (Counter)
             {
@@ -379,25 +384,31 @@ namespace JMind
 					PositionsColours++;
 					ColurSubtract++;
 
-					foreach (NSColor C in CurrentSolution)
-                    {
-						if (C == Solution[i])
-                        {
-							ColoursOnly++;
-                        }
-                    }
-
-
                 }
-				
-            }
+
+				for (int j = 0; i < 4; i++)
+				{
+					foreach (NSColor C in CurrentSolution)
+					{
+						Console.WriteLine(C);
+						Console.WriteLine(Solution[j]);
+						if (C == Solution[j])
+						{
+							ColoursOnly++;
+						}
+					}
+				}
+
+			}
 
 
 			PC[Counter] = PositionsColours;
 			ColOnly[Counter] = ColoursOnly - ColurSubtract;
 
 			P1.StringValue = PositionsColours.ToString();
-        }
+			CO1.StringValue = ColOnly[Counter].ToString();
+			Console.WriteLine(ColOnly[Counter].ToString());
+		}
 
 
 
