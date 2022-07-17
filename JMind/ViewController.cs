@@ -57,9 +57,9 @@ namespace JMind
 		// MARK: DECLARED PUBLIC LISTS
 
 		//List of correct positions and colours for each row
-		public int[] PC = { 0, 0, 0, 0 };
+		public int[] PC = { 0, 0, 0, 0,0,0,0,0,0 };
 		//List of colours in each row
-		public int[] ColOnly = {0,0,0,0};
+		public int[] ColOnly = {0,0,0,0,0,0,0,0};
 
 		public NSColor[] ColorOptions =
 			{
@@ -362,16 +362,35 @@ namespace JMind
 					break;
 
 				case 2:
-					Row2[0] = A2.BezelColor;
-					Row2[1] = B2.BezelColor;
-					Row2[2] = C2.BezelColor;
-					Row2[3] = D2.BezelColor;
+					CurrentSolution[0] = A2.BezelColor;
+					CurrentSolution[1] = B2.BezelColor;
+					CurrentSolution[2] = C2.BezelColor;
+					CurrentSolution[3] = D2.BezelColor;
 					break;
 				case 3:
-					Row3[0] = A3.BezelColor;
-					Row3[1] = B3.BezelColor;
-					Row3[2] = C3.BezelColor;
-					Row3[3] = D3.BezelColor;
+					CurrentSolution[0] = A3.BezelColor;
+					CurrentSolution[1] = B3.BezelColor;
+					CurrentSolution[2] = C3.BezelColor;
+					CurrentSolution[3] = D3.BezelColor;
+					break;
+				case 4:
+					CurrentSolution[0] = A4.BezelColor;
+					CurrentSolution[1] = B4.BezelColor;
+					CurrentSolution[2] = C4.BezelColor;
+					CurrentSolution[3] = D4.BezelColor;
+					break;
+				case 5:
+					CurrentSolution[0] = A5.BezelColor;
+					CurrentSolution[1] = B5.BezelColor;
+					CurrentSolution[2] = C5.BezelColor;
+					CurrentSolution[3] = D5.BezelColor;
+					break;
+
+				default:
+					CurrentSolution[0] = A5.BezelColor;
+					CurrentSolution[1] = B5.BezelColor;
+					CurrentSolution[2] = C5.BezelColor;
+					CurrentSolution[3] = D5.BezelColor;
 					break;
 			}
 
@@ -403,11 +422,60 @@ namespace JMind
 
 
 			PC[Counter] = PositionsColours;
-			ColOnly[Counter] = ColoursOnly - ColurSubtract;
+			ColOnly[Counter] = ColoursOnly;
 
-			P1.StringValue = PositionsColours.ToString();
-			CO1.StringValue = ColOnly[Counter].ToString();
-			Console.WriteLine(ColOnly[Counter].ToString());
+
+			switch (Counter)
+            {
+				case 1:
+					P1.StringValue = PositionsColours.ToString();
+					CO1.StringValue = ColOnly[Counter].ToString();
+					Console.WriteLine(ColOnly[Counter].ToString());
+					break;
+				case 2:
+					P2.Title = PositionsColours.ToString();
+					CO2.Title = ColOnly[Counter].ToString();
+
+					//P1.StringValue = PositionsColours.ToString();
+					//CO1.StringValue = ColOnly[Counter].ToString();
+					Console.WriteLine(ColOnly[Counter].ToString());
+					break;
+				case 3:
+					P3.Title = PositionsColours.ToString();
+					CO3.Title = ColOnly[Counter].ToString();
+
+					//P1.StringValue = PositionsColours.ToString();
+					//CO1.StringValue = ColOnly[Counter].ToString();
+					Console.WriteLine(ColOnly[Counter].ToString());
+					break;
+				case 4:
+					P4.Title = PositionsColours.ToString();
+					CO4.Title = ColOnly[Counter].ToString();
+
+					//P1.StringValue = PositionsColours.ToString();
+					//CO1.StringValue = ColOnly[Counter].ToString();
+					Console.WriteLine(ColOnly[Counter].ToString());
+					break;
+				case 5:
+					P5.Title = PositionsColours.ToString();
+					CO5.Title = ColOnly[Counter].ToString();
+
+					//P1.StringValue = PositionsColours.ToString();
+					//CO1.StringValue = ColOnly[Counter].ToString();
+					Console.WriteLine(ColOnly[Counter].ToString());
+					break;
+
+				default:
+					P5.Title = PositionsColours.ToString();
+					CO5.Title = ColOnly[Counter].ToString();
+
+					//P1.StringValue = PositionsColours.ToString();
+					//CO1.StringValue = ColOnly[Counter].ToString();
+					Console.WriteLine(ColOnly[Counter].ToString());
+					break;
+			}
+
+			
 		}
 
 

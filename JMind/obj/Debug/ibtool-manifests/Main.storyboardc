@@ -21,12 +21,87 @@
 				<integer>13</integer>
 			</dict>
 		</array>
+		<key>GWG-sF-NPG</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>GWG-sF-NPG</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>Hi2-9m-JUM</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>Hi2-9m-JUM</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>IPl-lA-3ZN</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>IPl-lA-3ZN</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
 		<key>QJD-ct-T5q</key>
 		<array>
 			<dict>
 				<key>affected-objects</key>
 				<array>
 					<string>QJD-ct-T5q</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>R9Y-gl-C6j</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>R9Y-gl-C6j</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>UN7-6B-x28</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>UN7-6B-x28</string>
 				</array>
 				<key>message</key>
 				<string>View is clipping its content</string>
@@ -51,6 +126,36 @@
 				<integer>13</integer>
 			</dict>
 		</array>
+		<key>Y2l-iF-wq3</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>Y2l-iF-wq3</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>flm-nn-i7e</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>flm-nn-i7e</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
 		<key>mDD-jF-IHf</key>
 		<array>
 			<dict>
@@ -64,6 +169,21 @@
 				<string>IBIssueTypeIntrinsicSizeMismatch</string>
 				<key>type-value</key>
 				<integer>22</integer>
+			</dict>
+		</array>
+		<key>rYw-mg-ISu</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>rYw-mg-ISu</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
 			</dict>
 		</array>
 	</dict>

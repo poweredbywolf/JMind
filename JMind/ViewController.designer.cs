@@ -70,6 +70,18 @@ namespace JMind
 		AppKit.NSTextField CO1 { get; set; }
 
 		[Outlet]
+		AppKit.NSButton CO2 { get; set; }
+
+		[Outlet]
+		AppKit.NSButton CO3 { get; set; }
+
+		[Outlet]
+		AppKit.NSButton CO4 { get; set; }
+
+		[Outlet]
+		AppKit.NSButton CO5 { get; set; }
+
+		[Outlet]
 		AppKit.NSButton CTop { get; set; }
 
 		[Outlet]
@@ -97,7 +109,16 @@ namespace JMind
 		AppKit.NSTextField P1 { get; set; }
 
 		[Outlet]
-		AppKit.NSTextFieldCell UserInfoLabel { get; set; }
+		AppKit.NSButton P2 { get; set; }
+
+		[Outlet]
+		AppKit.NSButton P3 { get; set; }
+
+		[Outlet]
+		AppKit.NSButton P4 { get; set; }
+
+		[Outlet]
+		AppKit.NSButton P5 { get; set; }
 
 		[Action ("A:")]
 		partial void A (Foundation.NSObject sender);
@@ -262,9 +283,44 @@ namespace JMind
 				P1 = null;
 			}
 
-			if (UserInfoLabel != null) {
-				UserInfoLabel.Dispose ();
-				UserInfoLabel = null;
+			if (P2 != null) {
+				P2.Dispose ();
+				P2 = null;
+			}
+
+			if (CO2 != null) {
+				CO2.Dispose ();
+				CO2 = null;
+			}
+
+			if (P3 != null) {
+				P3.Dispose ();
+				P3 = null;
+			}
+
+			if (CO3 != null) {
+				CO3.Dispose ();
+				CO3 = null;
+			}
+
+			if (P4 != null) {
+				P4.Dispose ();
+				P4 = null;
+			}
+
+			if (CO4 != null) {
+				CO4.Dispose ();
+				CO4 = null;
+			}
+
+			if (P5 != null) {
+				P5.Dispose ();
+				P5 = null;
+			}
+
+			if (CO5 != null) {
+				CO5.Dispose ();
+				CO5 = null;
 			}
 		}
 	}

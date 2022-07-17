@@ -78,11 +78,7 @@
 
 @property (nonatomic, retain) IBOutlet NSTextField *CO1;
 
-
-
 @property (nonatomic, retain) IBOutlet NSButton *CTop;
-
-
 
 @property (nonatomic, retain) IBOutlet NSButton *D1;
 
@@ -95,12 +91,22 @@
 @property (nonatomic, retain) IBOutlet NSButton *D5;
 
 @property (nonatomic, retain) IBOutlet NSButton *DTop;
-
 @property (nonatomic, retain) IBOutlet NSButton *DT;
 
 @property (nonatomic, retain) IBOutlet NSTextField *P1;
 
-@property (nonatomic, retain) IBOutlet NSTextFieldCell *UserInfoLabel;
+
+@property (weak) IBOutlet NSButton *P2;
+@property (weak) IBOutlet NSButton *CO2;
+
+
+@property (weak) IBOutlet NSButton *P3;
+@property (weak) IBOutlet NSButton *CO3;
+
+@property (weak) IBOutlet NSButton *P4;
+@property (weak) IBOutlet NSButton *CO4;
+@property (weak) IBOutlet NSButton *P5;
+@property (weak) IBOutlet NSButton *CO5;
 
 
 
@@ -110,13 +116,10 @@
 
 - (IBAction)C:(id)sender;
 
-- (IBAction)ConfirmA:(NSButton *)sender;
+- (IBAction)Start:(id)sender;
 
 - (IBAction)ConfirmRow:(id)sender;
 
-- (IBAction)Start:(id)sender;
-
 - (IBAction)D:(id)sender;
-
 
 @end
