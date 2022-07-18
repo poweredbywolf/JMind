@@ -334,9 +334,13 @@ namespace JMind
 			int ColoursOnly = 0;
 			int ColurSubtract = 0;
 			//List<NSColor> CurrentSolution = new List<NSColor>();
-			NSColor[] CurrentSolution = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, };
+			NSColor[] CurrentSolution = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black };
 
 			Console.WriteLine($"Checking Row {Counter}");
+
+	// Place the Colour combination for the solution in a
+    // Public List defined for global scope containing
+	//NSColor objects
 
             Solution[0] = ATop.BezelColor;
             Solution[1] = BTop.BezelColor;
@@ -344,17 +348,14 @@ namespace JMind
             Solution[3] = DT.BezelColor;
 
             Console.WriteLine(ATop.BezelColor);
-			//Solution[0] = NSColor.Red;
-			//Solution[1] = NSColor.Black;
+
+			//Place the guess for each row in a local scoped List which will later
+			//be used to output the results
+			//Cases refer to the rows of guesses handles by a public int variable Counter
 
 			switch (Counter)
             {
 				case 1:
-					Row1[0] = A1.BezelColor;
-					Row1[1] = B1.BezelColor;
-					Row1[2] = C1.BezelColor;
-					Row1[3] = D1.BezelColor;
-
 					CurrentSolution[0] = A1.BezelColor;
 					CurrentSolution[1] = B1.BezelColor;
 					CurrentSolution[2] = C1.BezelColor;
@@ -394,7 +395,10 @@ namespace JMind
 					break;
 			}
 
-			
+
+		//MARK: Working out the results for each row
+
+		
 			for (int i = 0; i <4; i++)
             {
 				if (CurrentSolution[i] ==  Solution[i])
@@ -402,29 +406,28 @@ namespace JMind
                 {
 					PositionsColours++;
 					ColurSubtract++;
+					Console.WriteLine($"The Positions are {PositionsColours}, for Row {Counter}");
 
                 }
-
-				for (int j = 0; i < 4; i++)
-				{
-					foreach (NSColor C in CurrentSolution)
-					{
-						Console.WriteLine(C);
-						Console.WriteLine(Solution[j]);
-						if (C == Solution[j])
-						{
-							ColoursOnly++;
-						}
-					}
-				}
-
 			}
 
+			for (int j = 0; j < 4; j++)
+			{
+				foreach (NSColor C in CurrentSolution)
+				{
+					Console.WriteLine($"Colour {C} in Guesses for Row {Counter}");
+					Console.WriteLine($"Does it match the actual Solution Color {Solution[j]}");
+					if (C == Solution[j])
+					{
+						ColoursOnly++;
+					}
+				}
+			}
 
 			PC[Counter] = PositionsColours;
 			ColOnly[Counter] = ColoursOnly;
 
-
+		//OUTPUTING THE RESULTS TO GUI
 			switch (Counter)
             {
 				case 1:
