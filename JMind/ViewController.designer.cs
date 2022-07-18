@@ -121,6 +121,9 @@ namespace JMind
 		AppKit.NSButton P5 { get; set; }
 
 		[Outlet]
+		AppKit.NSTextField Reveal { get; set; }
+
+		[Outlet]
 		AppKit.NSTextFieldCell UserOutput { get; set; }
 
 		[Action ("A:")]
@@ -140,6 +143,9 @@ namespace JMind
 
 		[Action ("D:")]
 		partial void D (Foundation.NSObject sender);
+
+		[Action ("RevealButton:")]
+		partial void RevealButton (Foundation.NSObject sender);
 
 		[Action ("Start:")]
 		partial void Start (Foundation.NSObject sender);
@@ -329,6 +335,11 @@ namespace JMind
 			if (UserOutput != null) {
 				UserOutput.Dispose ();
 				UserOutput = null;
+			}
+
+			if (Reveal != null) {
+				Reveal.Dispose ();
+				Reveal = null;
 			}
 		}
 	}

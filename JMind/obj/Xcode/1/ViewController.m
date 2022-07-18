@@ -53,6 +53,9 @@
 - (IBAction)ConfirmRow:(id)sender {
 }
 
+- (IBAction)RevealButton:(id)sender {
+}
+
 - (IBAction)D:(id)sender {
 }
 

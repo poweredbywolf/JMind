@@ -7,7 +7,8 @@ using Foundation;
 
 namespace JMind
 {
-
+//NSViewController is Apples class to manage view
+// Loaded from a nib file
 	public partial class ViewController : NSViewController
 	{
 
@@ -36,30 +37,39 @@ namespace JMind
 			base.ViewDidLoad();
 		}
 
-//---------------------------------------------------------------------
+		//---------------------------------------------------------------------
 		// Unique to application
 
 
 		// MARK: DECLARED PUBLIC VARIABLES
 
-		public bool[] RowsConfirmed = { false };
-
+		
+		
 		public NSColor[] ChosenColours;
 
-
+		// initialising an object to provide me with random numbers
 		public Random rand = new Random();
 
 
 		//Counter for Game
+		// This is a critical variable in the game as it tracks the row the user is on
 		public int Counter = 0;
 
 
 		// MARK: DECLARED PUBLIC LISTS
 
+		// I had a problem when I declared lists : public int[] PC; or public int[]PC = new int[]();
+		//it needed me to provide values for the list
+
 		//List of correct positions and colours for each row
 		public int[] PC = { 0, 0, 0, 0,0,0,0,0,0 };
+
 		//List of colours in each row
 		public int[] ColOnly = {0,0,0,0,0,0,0,0};
+
+		//created a list so that I could allocated a numeric number to each
+		//Apple colour object
+		//initially did this as a enum but had issues to reverted to a list
 
 		public NSColor[] ColorOptions =
 			{
@@ -73,6 +83,8 @@ namespace JMind
 
 
 		// Lists for various Rows to keep track of user guesses
+
+		//Again had to initialise with values otherwise it gave me issues
 		public NSColor[] Solution = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, }  ;
 		public NSColor[] Row1 = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, };
 		public NSColor[] Row2 = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black, };
@@ -82,50 +94,52 @@ namespace JMind
 
 		// MARK: DECLARED FUNCTIONS
 
-		public int ReturnRowsConfirmed()
-		{
-			int Count = 0;
-			foreach (bool r in RowsConfirmed)
-			{
-				if (r == false)
-				{
-					Count++;
 
-				}
-			}
-			Console.WriteLine($"Conter is {Counter}");
-			return Count;
-		}
-
+	// Function at start of game to choose the colour combination of the solution
+	//
 
 		public void ChooseColorSelection()
 		{
+			//Fussy needs me to initialise with values - I used 7 because at this
+			//stage there are no colours in the list at position 7
+			// Should use a try catch statement to catch if one of the 7 values are being inserted
+
 			int[] NumberSelection = { 7, 7, 7, 7 };
 
+			//initialise a counter for the while loop 
 			int t = 0;
 			while (t < 4)
 			{
-				//Random number gets chosen
+			//Random number gets chosen
 				int number = rand.Next(6);
 
-				// test to see 
-				bool test = false;
+	// test to determine if the random generator is choosing the same number again
+	// This is very likely as it is choosing 4 numbers out of 6
+				bool test = true;
 
+
+	//Loops through the numbers already selected if no correlation
+	//then test remains true and the next number can be used
 				foreach (int n in NumberSelection)
 				{
 					if (n == number)
 					{
-						test = true;
+						test = false;
 						break;
 					}
 				}
 
-				if (test == false)
+				if (test == true)
 				{
 					NumberSelection[t] = number;
 					t++;
 				}
 			}
+
+
+	//Take the random number generated and correlate them with NSObject colour
+	//From the ColourOptions list, place them into the top NSButtons on the UI
+
 
             Console.WriteLine($"Color Options are {ChosenColours}");
 			ATop.BezelColor = ColorOptions[NumberSelection[0]];
@@ -135,6 +149,12 @@ namespace JMind
 		}
 
 
+
+//A verbose method of determining which button needs to change colour by the user selection
+//The Colour Selector button at the bottom sends a string parameter of with the letters
+// A B C D representing the Columns, this is filtered through an if statement
+// The row is determined by the counter number declared above and is filtered by the switch statement
+// 
 	// returns the button of the relevant row
 		public AppKit.NSButton ReturnButton(string Column)
         {
@@ -284,6 +304,11 @@ namespace JMind
 		}
 
 
+//Function to alter the colour when you click on the button that chooses colours
+// Simple if statements if the button is currently a certain colour it must change to the next
+// colour in the order
+//You can use this function to add more colour. This will make the puzzle harder
+
 		public NSColor ReturnColor(NSButton Button)
         {
 			NSColor Colour = Button.BezelColor;
@@ -332,7 +357,10 @@ namespace JMind
 
 			int PositionsColours = 0;
 			int ColoursOnly = 0;
-			int ColurSubtract = 0;
+			int ColurSubtract = 0; // Was going to initially report colours excluding the ones that were already in the right position, abandoned this decision
+
+
+//Created a list to hold the colours of the current row
 			//List<NSColor> CurrentSolution = new List<NSColor>();
 			NSColor[] CurrentSolution = { NSColor.Black, NSColor.Black, NSColor.Black, NSColor.Black };
 
@@ -353,6 +381,9 @@ namespace JMind
 			//be used to output the results
 			//Cases refer to the rows of guesses handles by a public int variable Counter
 
+
+			//The switch codition is to ensure we are getting the colours from the current row which is determined by the
+			//Counter variable
 			switch (Counter)
             {
 				case 1:
@@ -491,9 +522,12 @@ namespace JMind
         {
 			UserOutput.Title = "YOU WIN!!!";
 			UserOutput.TextColor = NSColor.Red;
+			Reveal.Hidden = true;
 
 
-        }
+		}
+
+
 
 
 	//MARK: EVENTS BUTTON ACTIONS
@@ -537,6 +571,20 @@ namespace JMind
 		{
 			NSButton Button = ReturnButton("D");
 		}
-	}
+
+        partial void RevealButton(NSObject sender)
+        {
+			Reveal.BackgroundColor = NSColor.Clear;
+			Reveal.Hidden = true;
+
+        }
+
+
+    }
 }
+
+// TO DO:
+// Check to see colour is not selected twice in row
+// Better response to user when he wins game, maybe an animation
+//
 

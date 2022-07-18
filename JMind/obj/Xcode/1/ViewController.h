@@ -112,6 +112,7 @@
 
 @property (weak) IBOutlet NSTextFieldCell *UserOutput;
 
+@property (weak) IBOutlet NSTextField *Reveal;
 
 
 - (IBAction)A:(id)sender;
@@ -125,5 +126,8 @@
 - (IBAction)ConfirmRow:(id)sender;
 
 - (IBAction)D:(id)sender;
+
+- (IBAction)RevealButton:(id)sender;
+
 
 @end
