@@ -1113,6 +1113,23 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggj-rw-0PE">
+                                <rect key="frame" x="-6" y="232" width="131" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" borderStyle="bezel" drawsBackground="YES" id="cJA-u5-i4j">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.064552460179999993" green="0.02334601172" blue="0.2502181155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJj-Va-qQE">
+                                <rect key="frame" x="11" y="128" width="105" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="REVEAL" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NaU-H9-Ccw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -1151,6 +1168,7 @@
                         <outlet property="P3" destination="GWG-sF-NPG" id="jmr-05-gkB"/>
                         <outlet property="P4" destination="flm-nn-i7e" id="Em6-2r-Olt"/>
                         <outlet property="P5" destination="R9Y-gl-C6j" id="AiM-MF-NJn"/>
+                        <outlet property="UserOutput" destination="4rI-0c-ioN" id="pbp-7O-tZF"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

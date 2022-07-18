@@ -120,6 +120,9 @@ namespace JMind
 		[Outlet]
 		AppKit.NSButton P5 { get; set; }
 
+		[Outlet]
+		AppKit.NSTextFieldCell UserOutput { get; set; }
+
 		[Action ("A:")]
 		partial void A (Foundation.NSObject sender);
 
@@ -321,6 +324,11 @@ namespace JMind
 			if (CO5 != null) {
 				CO5.Dispose ();
 				CO5 = null;
+			}
+
+			if (UserOutput != null) {
+				UserOutput.Dispose ();
+				UserOutput = null;
 			}
 		}
 	}

@@ -110,6 +110,10 @@
 
 
 
+@property (weak) IBOutlet NSTextFieldCell *UserOutput;
+
+
+
 - (IBAction)A:(id)sender;
 
 - (IBAction)B:(id)sender;

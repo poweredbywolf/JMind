@@ -427,6 +427,11 @@ namespace JMind
 			PC[Counter] = PositionsColours;
 			ColOnly[Counter] = ColoursOnly;
 
+			if (PositionsColours == 4)
+            {
+				YouWin();
+            }
+
 		//OUTPUTING THE RESULTS TO GUI
 			switch (Counter)
             {
@@ -482,6 +487,14 @@ namespace JMind
 		}
 
 
+		public void YouWin()
+        {
+			UserOutput.Title = "YOU WIN!!!";
+			UserOutput.TextColor = NSColor.Red;
+
+
+        }
+
 
 	//MARK: EVENTS BUTTON ACTIONS
 
@@ -490,7 +503,9 @@ namespace JMind
 
 		partial void Start(NSObject sender)
 		{
-				Counter = 1;
+			UserOutput.Title = "Welcome to our mind game";
+			UserOutput.TextColor = NSColor.Blue;
+			Counter = 1;
 				ChooseColorSelection();
 
 		}
